@@ -1,0 +1,91 @@
+// filepath: c:\Users\asus_\portofolio\src\components\Skills.jsx
+import React, { useState } from 'react';
+import Image from './common/Image';
+
+function Skills() {
+  const [activeCategory, setActiveCategory] = useState('software');
+  
+  const softwareSkills = [
+    { name: 'HTML', icon: '/images/logo/HTML.svg' },
+    { name: 'CSS', icon: '/images/logo/CSS.svg' },
+    { name: 'JavaScript', icon: '/images/logo/JS.svg' },
+    { name: 'Laravel', icon: '/images/logo/LARAVEL.svg' },
+    { name: 'Bootstrap', icon: '/images/logo/BS.svg' },
+    { name: 'React', icon: '/images/logo/REACT.svg' },
+    { name: 'PHP', icon: '/images/logo/PHP.svg' }
+  ];
+
+  const designSkills = [
+    { name: 'Figma', icon: '/images/logo/FIGMA.svg' },
+    { name: 'Adobe Photoshop', icon: '/images/logo/PS.svg' },
+    { name: 'CorelDRAW', icon: '/images/logo/COREL.svg' },
+    { name: 'Canva', icon: '/images/logo/CANVA.svg' }
+  ];
+  
+  return (
+    <section id="skills" className="skills">
+      <div className="container">
+        <div className="row mb-5">
+          <div className="col-12 text-center">
+            <h2 className="section-title mb-4">Skills</h2>
+            
+            <div className="skills-tabs">
+              <button 
+                className={`skills-tab ${activeCategory === 'software' ? 'active' : ''}`}
+                onClick={() => setActiveCategory('software')}
+              >
+                Software Engineering
+              </button>
+              <button 
+                className={`skills-tab ${activeCategory === 'design' ? 'active' : ''}`}
+                onClick={() => setActiveCategory('design')}
+              >
+                Graphic Design
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div className="row skills-container">
+          {activeCategory === 'software' && (
+            <div className="col-12">
+              <div className="skills-category">
+                <h3 className="mb-4">Software Engineering Skills</h3>
+                <div className="skill-icons-container">
+                  {softwareSkills.map((skill, index) => (
+                    <div className="skill-icon-item" key={index} title={skill.name}>
+                      <div className="skill-icon">
+                        <Image src={skill.icon} alt={skill.name} />
+                        <div className="skill-name">{skill.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {activeCategory === 'design' && (
+            <div className="col-12">
+              <div className="skills-category">
+                <h3 className="mb-4">Graphic Design Skills</h3>
+                <div className="skill-icons-container">
+                  {designSkills.map((skill, index) => (
+                    <div className="skill-icon-item" key={index} title={skill.name}>
+                      <div className="skill-icon">
+                        <Image src={skill.icon} alt={skill.name} />
+                        <div className="skill-name">{skill.name}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Skills;
