@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg">
       <div className="container">        <a className="navbar-brand fs-4 d-flex align-items-center" href="#">
           <div className="navbar-img-container me-2">
-            <Image src="/images/logo/FOTO.svg" alt="Muhammad Zakariyya" />
+            <Image src="/images/logo/LOGO MZ.svg" alt="Muhammad Zakariyya" />
           </div>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
