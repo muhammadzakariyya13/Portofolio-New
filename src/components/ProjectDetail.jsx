@@ -22,9 +22,12 @@ function ProjectDetail({ project, onBack }) {
       </section>
     );
   }
-  
-  // Determine if this is a graphic or software project
-  const isGraphicProject = project.id.startsWith('gd-');
+    // Determine if this is a graphic or software project
+  const isGraphicProject = project.id.startsWith('ux-') || 
+                          project.id.startsWith('logo-') || 
+                          project.id.startsWith('social-') || 
+                          project.id.startsWith('mockup-') || 
+                          project.id.startsWith('gd-');
     return (
     <section className="project-detail">
       <div className="container">
@@ -142,8 +145,7 @@ function ProjectDetail({ project, onBack }) {
                     <div className="gallery-image">
                       <Image src={image.src} alt={image.title || `Gallery image ${index + 1}`} />
                     </div>
-                    <div className="gallery-info">
-                      <h5>{image.title || `Project Image ${index + 1}`}</h5>
+                    <div className="gallery-info">                      <h5>{image.title || image.alt || `Project Image ${index + 1}`}</h5>
                       {image.tools && image.tools.length > 0 && (
                         <div className="gallery-tools">
                           {image.tools.map((tool, toolIndex) => (

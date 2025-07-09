@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Zakariyya - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand fs-4 d-flex align-items-center" href="#">
+            <div class="navbar-img-container me-2">
+              <img src="images/3.png" alt="Muhammad Zakariyya">
+            </div>
+            <!-- Muhammad Zakariyya<span class="text-accent"></span> -->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+
+              <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="#certifications">Certifications</a>
+              </li>            
+              <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section id="home" class="home container">
+            <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
+                <div class="col-12 col-md-8">
+                    <h3>Hi, I'm</h3>
+                    <h1>Muhammad Zakariyya</h1>
+                    <p>Graphic Designer & Software Engineer based in Indonesia, passionate about creating visually appealing and functional digital experiences.</p>
+                    <div class="mt-4">
+                        <a class="btn button me-3" href="images/potrait.png" download>Download CV</a>
+                        <a class="btn button" href="#contact">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
+                    <div class="profile-image-container">
+                        <img src="images/3.png" alt="Muhammad Zakariyya - Software Engineer">
+                    </div>
+                </div>
+            </div>
+            <a href="#experience" class="text-decoration-none arrow w-100 d-flex align-items-center flex-column">
+                <div class="text-white">Explore More</div>
+                <img id="arrow" class="mt-2" src="images/arrow.svg" alt="Scroll down">
+            </a>
+      </section>
+      
+      <section id="experience" class="experience container">
+        <div class="row mb-5">
+            <div class="col-12 col-md-8 mx-auto text-center">
+                <h2 class="section-title mb-4">Experience</h2>
+                <!-- <p>My professional journey in graphic and software design has equipped me with diverse skills and experiences.</p> -->
+            </div>
+        </div>
+        
+        <div class="experience-list">
+          <div class="experience-item">
+            <div class="experience-item-header">
+              <div>
+                <h5>Ikatan Mahasiswa Berprestasi Kabupaten Wonogiri</h5>
+                <p>Staff of the Media and Information Publication Division (Jan 2025 – Jun 2025)</p>
+              </div>
+              <button class="btn button" onclick="toogleDetail(event)">More Info</button>
+            </div>
+            <p class="experience-item-detail">Supported the planning and execution of content strategies across various platforms (Instagram, LinkedIn, TikTok, YouTube, and the official website), while editing and optimizing multimedia materials to ensure consistency and professionalism. Collaborated with division leaders to uphold content quality standards and contributed to internal coordination, fostering a productive and creative team environment.</p>
+          </div>
+          
+          <div class="experience-item">
+            <div class="experience-item-header">
+              <div>
+                <h5>Ikatan Mahasiswa Kabupaten Wonogiri UNNES</h5>
+                <p>Head of Media and Information Division (Jan 2025 – Now)</p>
+              </div>
+              <button class="btn button" onclick="toogleDetail(event)">More Info</button>
+            </div>
+            <p class="experience-item-detail">Led the Media and Information Division by managing a creative team responsible for producing and publishing digital content across social media platforms. Developed content strategies aligned with organizational goals to boost engagement and enhance the association’s public image. Supervised the creation of visual and written materials, ensuring consistent branding and quality. Provided training and guidance to improve the team’s technical skills in design, editing, and digital communication.</p>
+          </div>
+          
+          <div class="experience-item">
+            <div class="experience-item-header">
+              <div>
+                <h5>I-Secret UNNES</h5>
+                <p>UI/UX Designer (Apr 2024 - Aug 2024)</p>
+              </div>
+              <button class="btn button" onclick="toogleDetail(event)">More Info</button>
+            </div>
+            <p class="experience-item-detail">Designed mid- and high-fidelity mockups using Figma, developed interactive prototypes, and conducted user research to define personas, user flows, and wireframes. Collaborated closely with the development team to ensure seamless implementation of user-centered designs into functional interfaces.</p>
+          </div>        
+        </div>
+      </section>
+      
+      <section id="skills" class="skills container">
+        <div class="row mb-5">
+            <div class="col-12 col-md-8 mx-auto text-center">
+                <h2 class="section-title mb-4">Skills</h2>
+                <!-- <p>My comprehensive skill set allows me to deliver complete design solutions from concept to implementation.</p> -->
+            </div>
+        </div>
+        
+        <div class="row skills-container">
+            <div class="col-md-6">
+                <div class="skills-category">
+                    <h3 class="mb-4">Software Engineering</h3>
+                    <div class="skill-icons-container">
+                        <div class="skill-icon-item" title="HTML">
+                            <img src="images/logo/HTML.svg" alt="HTML">
+                        </div>
+                        <div class="skill-icon-item" title="CSS">
+                            <img src="images/logo/CSS.svg" alt="CSS">
+                        </div>
+                        <div class="skill-icon-item" title="JavaScript">
+                            <img src="images/logo/JS.svg" alt="JavaScript">
+                        </div>
+                        <div class="skill-icon-item" title="Laravel">
+                            <img src="images/logo/LARAVEL.svg" alt="Laravel">
+                        </div>
+                        <div class="skill-icon-item" title="Bootstrap">
+                            <img src="images/logo/BS.svg" alt="Bootstrap">
+                        </div>
+                        <div class="skill-icon-item" title="React">
+                            <img src="images/logo/REACT.svg" alt="React">
+                        </div>
+                        <div class="skill-icon-item" title="PHP">
+                            <img src="images/logo/PHP.svg" alt="PHP">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="skills-category">
+                    <h3 class="mb-4">Graphic Design</h3>
+                    <div class="skill-icons-container">
+                        <div class="skill-icon-item" title="Figma">
+                            <img src="images/logo/FIGMA.svg" alt="Figma">
+                        </div>
+                        <div class="skill-icon-item" title="Adobe Photoshop">
+                            <img src="images/logo/PS.svg" alt="Adobe Photoshop">
+                        </div>
+                        <div class="skill-icon-item" title="CorelDRAW">
+                            <img src="images/logo/COREL.svg" alt="CorelDRAW">
+                        </div>
+                        <div class="skill-icon-item" title="Canva">
+                            <img src="images/logo/CANVA.svg" alt="Canva">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      <section id="projects" class="projects container">
+        <div class="row mb-5">
+            <div class="col-12 col-md-8 mx-auto text-center">
+                <h2 class="section-title mb-4">My Projects</h2>
+                <!-- <p>Here's a selection of my recent projects, showcasing my skills in graphic design, UI/UX, and software design. Each project represents my commitment to visual excellence, intuitive interfaces, and delightful user experiences.</p> -->
+            </div>
+        </div>
+        
+        <!-- Graphic Designer Projects -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <h3 class="mb-4 text-center">Graphic Designer Projects</h3>
+          </div>
+          <div class="col-12 col-md-5">
+            <p>I create visually striking designs that communicate effectively. My graphic design work ranges from brand identity to marketing materials, illustrations, and user interfaces with a focus on aesthetics and user engagement.</p>
+            <div class="mt-4 d-flex gap-3">
+              <a href="https://www.behance.net/mzakariyya" target="_blank" class="btn button">View Graphic Design Portfolio</a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 offset-md-1 projects-img">
+            <div id="project-1" class="projects-img-item">
+              <img src="images/work-1.png" alt="Brand Identity Design">
+            </div>
+            <div id="project-2" class="projects-img-item">
+              <img src="images/work-2.png" alt="UI/UX Design">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Software Engineer Projects -->
+        <div class="row mt-5 d-flex align-items-center gap-5">
+          <div class="col-12">
+            <h3 class="mb-4 text-center">Software Engineer Projects</h3>
+          </div>
+          <div class="col-12 col-md-5">
+            <p>I develop intuitive and functional software solutions that solve real-world problems. My engineering approach focuses on clean code, performance optimization, and creating seamless user experiences across different platforms.</p>
+            <div class="mt-4">
+              <a href="#contact" class="btn button">Start a Project</a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 projects-img">
+            <div id="project-3" class="projects-img-item">
+              <img src="images/work-3.png" alt="App Interface Design">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="certifications" class="certifications container">
+        <div class="row mb-5">
+            <div class="col-12 col-md-8 mx-auto text-center">
+                <h2 class="section-title mb-4">Certifications</h2>
+                <!-- <p>My professional certifications demonstrate my commitment to staying current with industry standards and constantly improving my skills.</p> -->
+            </div>
+        </div>
+        
+        <div class="row certifications-container">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="certification-item">
+                    <div class="certification-icon">
+                        <img src="images/cert-icon.svg" alt="Certification">
+                    </div>
+                    <div class="certification-content">
+                        <h4>Adobe Certified Expert</h4>
+                        <p class="certification-issuer">Adobe, Inc.</p>
+                        <p class="certification-date">May 2024</p>
+                        <p class="certification-desc">Professional certification in Adobe Creative Suite with expertise in Photoshop, Illustrator, and XD.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="certification-item">
+                    <div class="certification-icon">
+                        <img src="images/cert-icon.svg" alt="Certification">
+                    </div>
+                    <div class="certification-content">
+                        <h4>UI/UX Design Professional</h4>
+                        <p class="certification-issuer">Interaction Design Foundation</p>
+                        <p class="certification-date">December 2023</p>
+                        <p class="certification-desc">Comprehensive certification in user interface and user experience design principles and methodologies.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="certification-item">
+                    <div class="certification-icon">
+                        <img src="images/cert-icon.svg" alt="Certification">
+                    </div>
+                    <div class="certification-content">
+                        <h4>Front-End Web Development</h4>
+                        <p class="certification-issuer">freeCodeCamp</p>
+                        <p class="certification-date">August 2023</p>
+                        <p class="certification-desc">Certification in HTML5, CSS3, JavaScript, responsive web design, and modern front-end frameworks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+    <section id="contact" class="contact container">
+      <div class="row mb-5">
+          <div class="col-12 col-md-8 mx-auto text-center">
+              <h2 class="section-title mb-4">Contact Me</h2>
+              <!-- <p>Looking for a professional graphic or software designer for your next project? Let's collaborate to bring your vision to life with beautiful designs and intuitive user experiences.</p> -->
+          </div>
+      </div>
+      
+      <div class="row d-flex align-items-center gap-5">
+        <div class="col-12 col-lg-6">
+          <h3 class="mb-3">Let's Connect</h3>
+          <p>I'm passionate about creating visually stunning designs and intuitive software interfaces. Whether you need brand identity, marketing materials, UI/UX design, or a complete digital product, I can help bring your vision to life.</p>
+          <p class="mb-4">Based in Indonesia, I provide professional graphic and software design services to clients worldwide.</p>
+          
+          <div class="row social-links">
+            <div class="col-md-4 col-6 d-flex align-items-center">
+              <a href="https://www.instagram.com/zkaryya.m/" class="social-link d-flex align-items-center" target="_blank">
+                <img class="w-25" src="images/instagram-simple.svg" alt="Instagram">
+                <!-- <p class="mb-0 ms-2">@zkaryya.m</p> -->
+              </a>
+            </div>
+            <div class="col-md-4 col-6 d-flex align-items-center">
+              <a href="https://www.linkedin.com/in/muhammad-zakariyya-946551284/" class="social-link d-flex align-items-center" target="_blank">
+                <img class="w-25" src="images/LinkedIn.svg" alt="LinkedIn">
+                <!-- <p class="mb-0 ms-2">Muhammad Zakariyya</p> -->
+              </a>
+            </div>
+            <div class="col-md-4 col-6 d-flex align-items-center">
+              <a href="https://github.com/muhammadzakariyya13" class="social-link d-flex align-items-center" target="_blank">
+                <img class="w-25" src="images/GitHub.svg" alt="GitHub">
+                <!-- <p class="mb-0 ms-2">@mu</p> -->
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <form class="contact-form" onsubmit="onFormSubmit(event)">
+            <div class="mb-3">
+              <label for="inp_email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="inp_email" placeholder="yourname@example.com">           
+            </div>
+            <div class="mb-3">
+              <label for="inp_subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="inp_subject" placeholder="Project Inquiry / Collaboration / etc.">
+            </div>
+            <div class="mb-3">
+              <label for="inp_message" class="form-label">Message</label>
+              <textarea class="form-control" id="inp_message" rows="4" placeholder="Tell me about your project or inquiry..."></textarea>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+              <button type="submit" class="btn button">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="py-4 text-center">
+      <div class="container">
+        <p class="mb-0">© 2025 Muhammad Zakariyya | Graphic & Software Designer. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
