@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Install dependencies with no-frozen-lockfile
-echo "Installing dependencies with --no-frozen-lockfile..."
-pnpm install --no-frozen-lockfile
+# Install dependencies with npm
+echo "Installing dependencies with npm..."
+npm install
 
 # Run build
 echo "Building the project..."
-pnpm run build
+npm run build
