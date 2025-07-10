@@ -3,9 +3,12 @@
  * Usage: node deploy.js
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Colors for console output
 const colors = {
@@ -25,7 +28,7 @@ const isGitRepo = fs.existsSync(path.join(__dirname, '.git'));
 const steps = [
   {
     title: 'Installing dependencies',
-    cmd: 'npm install'
+    cmd: 'pnpm install --no-frozen-lockfile'
   },
   {
     title: 'Running tests',
@@ -33,7 +36,7 @@ const steps = [
   },
   {
     title: 'Building for production',
-    cmd: 'npm run build'
+    cmd: 'pnpm run build'
   },
   {
     title: 'Validating build',
