@@ -397,7 +397,7 @@ function App() {
           'Automated notifications and reminders',
           'Comprehensive analytics dashboard'
         ],
-        demoLink: 'https://muhammadzakariyya.vercel.app/',
+        demoLink: 'https://mzakariyya.vercel.app/',
         githubLink: 'https://github.com/muhammadzakariyya13/Portofolio-New',
         figmaLink: 'https://figma.com/file/design/pds-tracking',
         gallery: [
