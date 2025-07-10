@@ -13,7 +13,7 @@ function Home() {
               <h1 className="main-title">Muhammad Zakariyya</h1>
               <p className="home-description">Graphic Designer & Software Engineer based in Indonesia, passionate about creating visually appealing and functional digital experiences.</p>
               <div className="mt-4 home-buttons">
-                <a className="btn button me-3" href="https://drive.google.com/file/d/1Bkk-Lo1LmsWvcDEEl1y8GgaSuRb-suRA/view?usp=sharing" download>Download CV</a>
+                <a className="btn button me-3" href="https://drive.google.com/file/d/12PhUTxPsvKsmQMGmfkmQCD-HBc8TnHfw/view?usp=sharing" download>Download CV</a>
                 <a className="btn button" href="#contact">Contact Me</a>
               </div>
             </div>
