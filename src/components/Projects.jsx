@@ -106,10 +106,11 @@ function Projects({ projects, onSelectProject }) {
                 <div className="project-card software-project"><div className="project-image">
                     <Image src={project.image} alt={project.title} />
                   </div>
-                  <div className="project-details">
-                    <h4 className="project-title">{project.title}</h4>
+                  <div className="project-details">                    <h4 className="project-title">{project.title}</h4>
                     {project.description && (
-                      <p className="project-description">{project.description}</p>
+                      <div className="project-description-wrapper">
+                        <p className="project-description">{project.description}</p>
+                      </div>
                     )}
                     <div className="project-info-container">
                       <div className="project-technologies">

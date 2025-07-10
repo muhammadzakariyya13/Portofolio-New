@@ -179,11 +179,11 @@ section::before {
 }
 
 .home {
-    padding-top: calc(var(--spacing-lg) + 60px);
+    padding-top: calc(var(--spacing-lg) + 100px);  /* Further increased padding top for better spacing */
     padding-bottom: 60px;
     min-height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Changed to column to better control "Explore More" spacing */
     justify-content: center;
     background-color: var(--bg-dark);
     position: relative;
@@ -191,10 +191,16 @@ section::before {
 }
 
 .home-content {
-    min-height: 70vh;
+    min-height: 65vh; /* Slightly reduced to make room for explore section */
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 20px; /* Added padding top for better spacing */
+}
+
+.explore-spacer {
+    height: 60px; /* Creates space between content and explore more section */
+    width: 100%;
 }
 
 .home .main-title {
@@ -290,11 +296,9 @@ section::before {
 }
 
 .home .arrow {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    position: relative; /* Changed from absolute to relative */
+    margin: 10px auto 30px;
+    padding-top: 20px;
     width: 100%;
     z-index: 10;
     cursor: pointer;
@@ -310,7 +314,7 @@ section::before {
     font-size: 16px;
     letter-spacing: 1px;
     margin-bottom: 8px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .home .arrow img {
@@ -611,6 +615,21 @@ section::before {
 
 /* Improved responsive tabs for mobile devices */
 @media (max-width: 576px) {
+  /* Home section padding adjustment for small screens */
+  .home {
+    padding-top: 120px;
+    padding-bottom: 20px;
+  }
+  
+  .home-content {
+    padding-top: 20px;
+    min-height: 60vh;
+  }
+  
+  .explore-spacer {
+    height: 80px; /* Extra space for smaller screens */
+  }
+  
   .projects .experience-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -703,8 +722,21 @@ section::before {
   }
   
   /* Home section */
+  .home {
+    padding-top: 100px; /* Adjusted padding for very small screens */
+  }
+  
   .home .main-title {
     font-size: 32px;
+    margin-top: 20px; /* Increased space above the title */
+  }
+  
+  .explore-spacer {
+    height: 100px; /* Even more space for tiny screens */
+  }
+  
+  .home .arrow {
+    margin-top: 20px;
   }
   
   .home .subtitle {
@@ -2066,7 +2098,7 @@ section::before {
   
   /* Home section responsive styles */
   .home {
-    padding-top: 80px;
+    padding-top: 120px; /* Further increased top padding for better spacing with navbar */
   }
   
   .home .main-title {
