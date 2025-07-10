@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from './common/Image';
 
 function ProjectDetail({ project, onBack }) {
+  const [popupImage, setPopupImage] = useState(null);
+  
+  const handleImageClick = (imageSrc) => {
+    setPopupImage(imageSrc);
+  };
   if (!project) {
     return (
       <section className="project-detail not-found">
@@ -22,12 +27,15 @@ function ProjectDetail({ project, onBack }) {
       </section>
     );
   }
-    // Determine if this is a graphic or software project
+  // Determine if this is a graphic or software project
   const isGraphicProject = project.id.startsWith('ux-') || 
                           project.id.startsWith('logo-') || 
                           project.id.startsWith('social-') || 
                           project.id.startsWith('mockup-') || 
                           project.id.startsWith('gd-');
+                          
+  // Check if this is a UI/UX or Social Media project
+  const isUIUXOrSocialProject = project.id.startsWith('ux-') || project.id.startsWith('social-');
     return (
     <section className="project-detail">
       <div className="container">
@@ -41,13 +49,14 @@ function ProjectDetail({ project, onBack }) {
           </button>
         </div>
         
-        <div className="project-detail-content">
-          {/* Title and Subtitle above image */}
+        <div className="project-detail-content">          {/* Title and Subtitle above image */}
           <div className="project-title-container">
             <h1 className="project-detail-title">{project.title}</h1>
-            <h3 className="project-detail-subtitle">
-              {isGraphicProject ? 'Graphic Design Project' : project.role || 'Software Project'}
-            </h3>
+            {!isUIUXOrSocialProject && (
+              <h3 className="project-detail-subtitle">
+                {isGraphicProject ? 'Graphic Design Project' : project.role || 'Software Project'}
+              </h3>
+            )}
               {/* Links Section for Software Projects - Positioned vertically */}
             {!isGraphicProject && (
               <div className="project-actions-vertical">
@@ -94,37 +103,35 @@ function ProjectDetail({ project, onBack }) {
             </div>
             
             {/* Right Column - Project Info */}
-            <div className="col-lg-7">
-              {/* Project Description */}
-              <div className="project-detail-section">
+            <div className="col-lg-7">              {/* Project Description */}              <div className="project-detail-section">
                 <h2 className="section-title">About this project</h2>
                 <p className="section-text">{project.description}</p>
               </div>
               
-              {/* Project Meta Information - Only showing Date and Role */}
-              <div className="project-detail-info">
-                <div className="detail-info-grid">
-                  {project.date && (
-                    <div className="info-item">
-                      <span className="info-label">Date</span>
-                      <span className="info-value">{project.date}</span>
-                    </div>
-                  )}
-                  {project.role && (
-                    <div className="info-item">
-                      <span className="info-label">Role</span>
-                      <span className="info-value">{project.role}</span>
-                    </div>
-                  )}
+              {/* Project Meta Information - Only showing Date and Role for non-UI/UX and non-Social Media projects */}
+              {!isUIUXOrSocialProject && (
+                <div className="project-detail-info">
+                  <div className="detail-info-grid">
+                    {project.date && (
+                      <div className="info-item">
+                        <span className="info-label">Date</span>
+                        <span className="info-value">{project.date}</span>
+                      </div>
+                    )}
+                    {project.role && (
+                      <div className="info-item">
+                        <span className="info-label">Role</span>
+                        <span className="info-value">{project.role}</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-              
-              {/* Tools Section */}
+              )}                {/* Tools Section */}
               <div className="project-detail-section">
                 <h2 className="section-title">
                   {isGraphicProject ? 'Tools Used' : 'Technologies'}
                 </h2>
-                <div className="tools-list">
+                <div className={`tools-list ${isUIUXOrSocialProject ? 'tools-list-compact' : ''}`}>
                   {(isGraphicProject ? project.tools : project.technologies).map((item, index) => (
                     <span key={index} className="tech-badge">{item}</span>
                   ))}
@@ -132,18 +139,17 @@ function ProjectDetail({ project, onBack }) {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Simplified Project Gallery with Image Names and Tools */}
-        {project.gallery && project.gallery.length > 0 && (
+        </div>        {/* Simplified Project Gallery with Image Names and Tools */}        {project.gallery && project.gallery.length > 0 && (
           <div className="project-gallery">
             <h2 className="section-title mt-4">Project Gallery</h2>
             <div className="row gallery-grid">
-              {project.gallery.map((image, index) => (
-                <div key={index} className="col-lg-4 col-md-6 gallery-item">
+              {project.gallery.map((image, index) => (<div key={index} className="col-lg-4 col-md-6 gallery-item">
                   <div className="gallery-card">
-                    <div className="gallery-image">
+                    <div className="gallery-image" onClick={() => handleImageClick(image.src)}>
                       <Image src={image.src} alt={image.title || `Gallery image ${index + 1}`} />
+                      <div className="gallery-image-overlay">
+                        <div className="view-image">Click to Enlarge</div>
+                      </div>
                     </div>
                     <div className="gallery-info">                      <h5>{image.title || image.alt || `Project Image ${index + 1}`}</h5>
                       {image.tools && image.tools.length > 0 && (
@@ -159,8 +165,20 @@ function ProjectDetail({ project, onBack }) {
               ))}
             </div>
           </div>
-        )}        {/* No CTA section anymore */}
-      </div>
+        )}        {/* No CTA section anymore */}      </div>
+      
+      {/* Gallery Image Popup */}
+      {popupImage && (
+        <div className="image-popup-overlay" onClick={() => setPopupImage(null)}>
+          <div className="image-popup-container">
+            <img src={popupImage} alt="Project Gallery" className="image-popup gallery-popup" />
+            <button className="close-popup" onClick={(e) => {
+              e.stopPropagation();
+              setPopupImage(null);
+            }}>×</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

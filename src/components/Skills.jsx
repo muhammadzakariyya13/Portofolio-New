@@ -18,18 +18,16 @@ function Skills() {
     { icon: '/images/logo/COREL.svg', name: 'CorelDRAW' },
     { icon: '/images/logo/CANVA.svg', name: 'Canva' }
   ];
-  
-  return (
+    return (
     <section id="skills" className="skills">
       <div className="container">
-        <div className="row mb-5">
+        <div className="row mb-4">
           <div className="col-12 text-center">
             <h2 className="section-title mb-4">Skills</h2>
           </div>
         </div>
-        
-        <div className="row skills-container">
-          <div className="col-md-6">
+          <div className="row skills-container">
+          <div className="col-md-6 mb-md-0 mb-4 skills-column graphic-skills-column">
             <div className="skills-category design-skills">
               <h3 className="mb-4">Graphic Design Skills</h3>
               <div className="skill-icons-container">                {designSkills.map((skill, index) => (
@@ -43,7 +41,7 @@ function Skills() {
             </div>
           </div>
           
-          <div className="col-md-6">
+          <div className="col-md-6 skills-column software-skills-column">
             <div className="skills-category software-skills">
               <h3 className="mb-4">Software Engineering Skills</h3>
               <div className="skill-icons-container">                {softwareSkills.map((skill, index) => (
