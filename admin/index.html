@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Muhammad Zakariyya</title>
+    <link rel="icon" type="image/svg+xml" href="../images/logo/LOGO MZ.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#users" class="nav-link" data-section="users">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Users</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <span class="nav-icon">📁</span>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#analytics" class="nav-link" data-section="analytics">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#settings" class="nav-link" data-section="settings">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+                <h1 class="page-title" id="pageTitle">Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="user-profile">
+                    <span class="user-name">Muhammad Zakariyya</span>
+                    <div class="user-avatar">MZ</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section class="content-section active" id="dashboardSection">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="1,247">0</h3>
+                        <p class="stat-label">Total Users</p>
+                    </div>
+                    <div class="stat-trend positive">+12.5%</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📁</div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="45">0</h3>
+                        <p class="stat-label">Active Projects</p>
+                    </div>
+                    <div class="stat-trend positive">+8.2%</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="$32,540">$0</h3>
+                        <p class="stat-label">Revenue</p>
+                    </div>
+                    <div class="stat-trend positive">+15.3%</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="94.2%">0%</h3>
+                        <p class="stat-label">Success Rate</p>
+                    </div>
+                    <div class="stat-trend positive">+2.1%</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3 class="chart-title">Monthly Analytics</h3>
+                    <div class="chart-container">
+                        <div class="simple-chart" id="monthlyChart"></div>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <h3 class="chart-title">Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <p class="activity-text">New project "Portfolio Redesign" created</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">👤</div>
+                            <div class="activity-content">
+                                <p class="activity-text">User "John Doe" registered</p>
+                                <span class="activity-time">4 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📊</div>
+                            <div class="activity-content">
+                                <p class="activity-text">Monthly report generated</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Users Section -->
+        <section class="content-section" id="usersSection">
+            <div class="section-header">
+                <h2 class="section-title">User Management</h2>
+                <button class="btn btn-primary">Add New User</button>
+            </div>
+            
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Joined</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTable">
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <div class="user-avatar small">JD</div>
+                                    <span>John Doe</span>
+                                </div>
+                            </td>
+                            <td>john.doe@example.com</td>
+                            <td><span class="role-badge admin">Admin</span></td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td>Jan 15, 2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-action edit">✏️</button>
+                                    <button class="btn-action delete">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <div class="user-avatar small">JS</div>
+                                    <span>Jane Smith</span>
+                                </div>
+                            </td>
+                            <td>jane.smith@example.com</td>
+                            <td><span class="role-badge user">User</span></td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td>Feb 3, 2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-action edit">✏️</button>
+                                    <button class="btn-action delete">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <div class="user-avatar small">MB</div>
+                                    <span>Mike Brown</span>
+                                </div>
+                            </td>
+                            <td>mike.brown@example.com</td>
+                            <td><span class="role-badge moderator">Moderator</span></td>
+                            <td><span class="status-badge inactive">Inactive</span></td>
+                            <td>Dec 20, 2023</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-action edit">✏️</button>
+                                    <button class="btn-action delete">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="content-section" id="projectsSection">
+            <div class="section-header">
+                <h2 class="section-title">Project Management</h2>
+                <button class="btn btn-primary">New Project</button>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <p class="project-description">Modern portfolio website with React and responsive design</p>
+                    <div class="project-meta">
+                        <div class="project-info">
+                            <span class="project-date">Due: Mar 15, 2024</span>
+                            <span class="project-progress">100%</span>
+                        </div>
+                        <div class="project-team">
+                            <div class="team-avatar">MZ</div>
+                            <div class="team-avatar">JD</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <span class="project-status in-progress">In Progress</span>
+                    </div>
+                    <p class="project-description">Full-stack e-commerce solution with payment integration</p>
+                    <div class="project-meta">
+                        <div class="project-info">
+                            <span class="project-date">Due: Apr 30, 2024</span>
+                            <span class="project-progress">67%</span>
+                        </div>
+                        <div class="project-team">
+                            <div class="team-avatar">JS</div>
+                            <div class="team-avatar">MB</div>
+                            <div class="team-avatar">AL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Mobile App Redesign</h3>
+                        <span class="project-status planning">Planning</span>
+                    </div>
+                    <p class="project-description">UI/UX redesign for existing mobile application</p>
+                    <div class="project-meta">
+                        <div class="project-info">
+                            <span class="project-date">Due: May 20, 2024</span>
+                            <span class="project-progress">15%</span>
+                        </div>
+                        <div class="project-team">
+                            <div class="team-avatar">MZ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section class="content-section" id="analyticsSection">
+            <div class="section-header">
+                <h2 class="section-title">Analytics Overview</h2>
+            </div>
+            
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <h3 class="analytics-title">Traffic Sources</h3>
+                    <div class="traffic-list">
+                        <div class="traffic-item">
+                            <div class="traffic-source">
+                                <span class="traffic-dot organic"></span>
+                                <span>Organic Search</span>
+                            </div>
+                            <span class="traffic-percentage">45.2%</span>
+                        </div>
+                        <div class="traffic-item">
+                            <div class="traffic-source">
+                                <span class="traffic-dot direct"></span>
+                                <span>Direct</span>
+                            </div>
+                            <span class="traffic-percentage">32.1%</span>
+                        </div>
+                        <div class="traffic-item">
+                            <div class="traffic-source">
+                                <span class="traffic-dot social"></span>
+                                <span>Social Media</span>
+                            </div>
+                            <span class="traffic-percentage">22.7%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-card">
+                    <h3 class="analytics-title">Performance Metrics</h3>
+                    <div class="metrics-list">
+                        <div class="metric-item">
+                            <span class="metric-label">Page Load Speed</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="metric-value">2.3s</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Bounce Rate</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill warning" style="width: 25%"></div>
+                            </div>
+                            <span class="metric-value">25%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Conversion Rate</span>
+                            <div class="metric-bar">
+                                <div class="metric-fill good" style="width: 78%"></div>
+                            </div>
+                            <span class="metric-value">7.8%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section class="content-section" id="settingsSection">
+            <div class="section-header">
+                <h2 class="section-title">Settings</h2>
+            </div>
+            
+            <div class="settings-grid">
+                <div class="settings-card">
+                    <h3 class="settings-title">General Settings</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">Site Title</label>
+                        <input type="text" class="setting-input" value="Muhammad Zakariyya Portfolio">
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">Site Description</label>
+                        <textarea class="setting-input" rows="3">Professional portfolio showcasing design and development work</textarea>
+                    </div>
+                    <div class="setting-item">
+                        <label class="setting-label">Theme</label>
+                        <select class="setting-input">
+                            <option value="dark">Dark Theme</option>
+                            <option value="light">Light Theme</option>
+                            <option value="auto">Auto</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="settings-card">
+                    <h3 class="settings-title">Notifications</h3>
+                    <div class="setting-item">
+                        <div class="setting-toggle">
+                            <label class="toggle-label">Email Notifications</label>
+                            <input type="checkbox" class="toggle-input" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-toggle">
+                            <label class="toggle-label">Push Notifications</label>
+                            <input type="checkbox" class="toggle-input">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-toggle">
+                            <label class="toggle-label">SMS Alerts</label>
+                            <input type="checkbox" class="toggle-input" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-actions">
+                <button class="btn btn-primary">Save Changes</button>
+                <button class="btn btn-secondary">Reset to Default</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
